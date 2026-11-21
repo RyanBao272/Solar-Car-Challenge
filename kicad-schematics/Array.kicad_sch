@@ -1,0 +1,1576 @@
+(kicad_sch
+	(version 20260306)
+	(generator "eeschema")
+	(generator_version "10.0")
+	(uuid "94f1852a-8289-4200-806d-659f14e23099")
+	(paper "USLetter")
+	(title_block
+		(date "2026-04-09")
+	)
+	(lib_symbols
+		(symbol "96V30A_MPPT_1"
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "U20"
+				(at 6.35 5.08 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "96V30A_MPPT"
+				(at 6.35 2.54 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" "https://makeskyblue.com/products/96v-30a-mppt-solar-charge-controller-w-wifi-1"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "96V30A_MPPT_1_1_1"
+				(rectangle
+					(start 0 0)
+					(end 12.7 -20.32)
+					(stroke
+						(width 0)
+						(type solid)
+					)
+					(fill
+						(type background)
+					)
+				)
+				(pin power_in line
+					(at -3.81 -1.27 0)
+					(length 3.81)
+					(name "PV+"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at -3.81 -3.81 0)
+					(length 3.81)
+					(name "PV+"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at -3.81 -6.35 0)
+					(length 3.81)
+					(name "PV-"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at -3.81 -8.89 0)
+					(length 3.81)
+					(name "PV-"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -3.81 -13.97 0)
+					(length 3.81)
+					(name "RXD"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -3.81 -16.51 0)
+					(length 3.81)
+					(name "TXD"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -3.81 -19.05 0)
+					(length 3.81)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_out line
+					(at 16.51 -1.27 180)
+					(length 3.81)
+					(name "BT+"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_out line
+					(at 16.51 -3.81 180)
+					(length 3.81)
+					(name "BT+"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_out line
+					(at 16.51 -6.35 180)
+					(length 3.81)
+					(name "BT-"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_out line
+					(at 16.51 -8.89 180)
+					(length 3.81)
+					(name "BT-"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_out line
+					(at 16.51 -12.7 180)
+					(length 3.81)
+					(name "OUT+"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_out line
+					(at 16.51 -15.24 180)
+					(length 3.81)
+					(name "OUT-"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "Device:Solar_Cells"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "SC"
+				(at 2.54 2.54 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Value" "Solar_Cells"
+				(at 2.54 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 1.524 90)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 1.524 90)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Multiple solar cells"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "solar cell"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "Solar_Cells_0_1"
+				(polyline
+					(pts
+						(xy -2.54 3.048) (xy -2.54 2.286) (xy -3.302 2.286)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -2.54 2.286) (xy -4.064 3.81)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -2.54 1.016) (xy -2.54 0.254) (xy -3.302 0.254)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -2.54 0.254) (xy -4.064 1.778)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start -2.032 1.778)
+					(end 2.032 1.524)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(rectangle
+					(start -2.032 -1.397)
+					(end 2.032 -1.651)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(rectangle
+					(start -1.3208 1.1938)
+					(end 1.27 0.6858)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(rectangle
+					(start -1.3208 -1.9812)
+					(end 1.27 -2.4892)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 1.778) (xy 0 2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 0.508) (xy 0 0.762)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 0) (xy 0 0.254)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 -0.508) (xy 0 -0.254)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 -1.016) (xy 0 -0.762)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 -1.524) (xy 0 -1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.254 2.667) (xy 1.27 2.667)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.762 3.175) (xy 0.762 2.159)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "Solar_Cells_1_1"
+				(pin passive line
+					(at 0 5.08 270)
+					(length 2.54)
+					(name "+"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -5.08 90)
+					(length 2.54)
+					(name "-"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "solar car:96V30A_MPPT"
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "U20"
+				(at 6.35 5.08 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "96V30A_MPPT"
+				(at 6.35 2.54 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" "https://makeskyblue.com/products/96v-30a-mppt-solar-charge-controller-w-wifi-1"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "96V30A_MPPT_1_1"
+				(rectangle
+					(start 0 0)
+					(end 12.7 -20.32)
+					(stroke
+						(width 0)
+						(type solid)
+					)
+					(fill
+						(type background)
+					)
+				)
+				(pin power_in line
+					(at -3.81 -1.27 0)
+					(length 3.81)
+					(name "PV+"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at -3.81 -3.81 0)
+					(length 3.81)
+					(name "PV+"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at -3.81 -6.35 0)
+					(length 3.81)
+					(name "PV-"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at -3.81 -8.89 0)
+					(length 3.81)
+					(name "PV-"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -3.81 -13.97 0)
+					(length 3.81)
+					(name "RXD"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -3.81 -16.51 0)
+					(length 3.81)
+					(name "TXD"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -3.81 -19.05 0)
+					(length 3.81)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_out line
+					(at 16.51 -1.27 180)
+					(length 3.81)
+					(name "BT+"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_out line
+					(at 16.51 -3.81 180)
+					(length 3.81)
+					(name "BT+"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_out line
+					(at 16.51 -6.35 180)
+					(length 3.81)
+					(name "BT-"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_out line
+					(at 16.51 -8.89 180)
+					(length 3.81)
+					(name "BT-"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_out line
+					(at 16.51 -12.7 180)
+					(length 3.81)
+					(name "OUT+"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_out line
+					(at 16.51 -15.24 180)
+					(length 3.81)
+					(name "OUT-"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+	)
+	(text "Repeat by number of zones"
+		(exclude_from_sim no)
+		(at 138.176 53.848 0)
+		(effects
+			(font
+				(size 3.81 3.81)
+			)
+		)
+		(uuid "9a973e4c-9409-4655-b6cb-1ed7058ad40a")
+	)
+	(text "x247 in series"
+		(exclude_from_sim no)
+		(at 100.33 107.696 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "ada93201-4bbb-4a4b-887e-8827c4478ac5")
+	)
+	(text "x247 in series"
+		(exclude_from_sim no)
+		(at 101.6 73.406 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "d277bcc5-0765-4f28-9d80-c1a23b4b8e20")
+	)
+	(no_connect
+		(at 157.48 109.22)
+		(uuid "0452c0c1-534f-4865-a78c-8102ce9faa85")
+	)
+	(no_connect
+		(at 157.48 118.11)
+		(uuid "061aa1d4-90aa-452d-89eb-b3ceb6291dc5")
+	)
+	(no_connect
+		(at 157.48 114.3)
+		(uuid "23c187e1-12fa-4c6d-b8e8-4fd103fa845c")
+	)
+	(no_connect
+		(at 158.75 86.36)
+		(uuid "4b23dd9d-db46-4cfd-a913-561a6321d6c6")
+	)
+	(no_connect
+		(at 158.75 83.82)
+		(uuid "54539cd1-2b0a-4ca1-adfd-6b69134a190e")
+	)
+	(no_connect
+		(at 137.16 114.3)
+		(uuid "697faf0b-5744-4d40-ad67-85ba5d67134b")
+	)
+	(no_connect
+		(at 138.43 80.01)
+		(uuid "a53a3dcf-450d-46c5-8888-0139698124c1")
+	)
+	(no_connect
+		(at 137.16 109.22)
+		(uuid "b1297c96-5c59-4312-b500-2f898d7a62a9")
+	)
+	(no_connect
+		(at 158.75 74.93)
+		(uuid "baba5bdf-60fb-40a9-9b75-fc2b7ced0f12")
+	)
+	(no_connect
+		(at 157.48 120.65)
+		(uuid "bca247a8-e858-43c1-ae7f-39a5a7f090ca")
+	)
+	(no_connect
+		(at 158.75 80.01)
+		(uuid "c3718660-6bd6-43b9-8a05-7e4db1c4a690")
+	)
+	(no_connect
+		(at 138.43 74.93)
+		(uuid "d2044016-211d-46f5-bc71-8a191bb1a809")
+	)
+	(wire
+		(pts
+			(xy 138.43 67.31) (xy 138.43 72.39)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "022fd41a-bca3-4c77-9fed-16f69ef000f7")
+	)
+	(wire
+		(pts
+			(xy 137.16 101.6) (xy 137.16 106.68)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2123292a-8197-4d6c-b75a-22e7e7c454d3")
+	)
+	(wire
+		(pts
+			(xy 114.3 77.47) (xy 138.43 77.47)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "59e1621e-5d4b-4be4-be7b-60c53f5c39c9")
+	)
+	(wire
+		(pts
+			(xy 113.03 111.76) (xy 137.16 111.76)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "84066a7f-34ad-4f66-901a-c2c918c59edd")
+	)
+	(wire
+		(pts
+			(xy 114.3 67.31) (xy 138.43 67.31)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "93b8901f-656b-43ac-8dfc-5434a0fa6f7b")
+	)
+	(wire
+		(pts
+			(xy 113.03 101.6) (xy 137.16 101.6)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b3010981-2cef-485a-af15-4cc1cabdcbc3")
+	)
+	(hierarchical_label "Array+"
+		(shape passive)
+		(at 158.75 72.39 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "15d73831-96e9-48e6-bd44-ad845a082abb")
+	)
+	(hierarchical_label "TXD_MPPT_TWO"
+		(shape output)
+		(at 137.16 121.92 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "287e8306-1a1e-41be-b9a2-a9caf34b0828")
+	)
+	(hierarchical_label "GND_MPPT_ONE"
+		(shape passive)
+		(at 138.43 90.17 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "2c4d8fdf-8dbb-4a58-9244-5716cfc27882")
+	)
+	(hierarchical_label "Array-"
+		(shape passive)
+		(at 158.75 77.47 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "39f0809e-a917-4d35-924a-6f66f794ce9b")
+	)
+	(hierarchical_label "GND_MPPT_TWO"
+		(shape passive)
+		(at 137.16 124.46 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "505646ea-783b-4d4c-bdeb-ee8bd2bf5ab5")
+	)
+	(hierarchical_label "RXD_MPPT_TWO"
+		(shape input)
+		(at 137.16 119.38 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "69d0f39f-b721-4feb-94eb-5e49e6b023de")
+	)
+	(hierarchical_label "TXD_MPPT_ONE"
+		(shape output)
+		(at 138.43 87.63 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "7f1ca6fa-9bf9-4e97-8d72-d3bdd1c2e54b")
+	)
+	(hierarchical_label "Array+"
+		(shape passive)
+		(at 157.48 106.68 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "c13c6eba-eeb1-4304-89e0-3e2ece1e7cd7")
+	)
+	(hierarchical_label "RXD_MPPT_ONE"
+		(shape input)
+		(at 138.43 85.09 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "d5c6b107-0c92-4647-973d-6c2c281fccee")
+	)
+	(hierarchical_label "Array-"
+		(shape passive)
+		(at 157.48 111.76 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "f8745d4b-937b-43b5-b9a0-c67c7454ef7b")
+	)
+	(symbol
+		(lib_id "Device:Solar_Cells")
+		(at 113.03 106.68 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "69873c88-9d49-4733-8cbc-5d13c502a24b")
+		(property "Reference" "SC2"
+			(at 116.84 104.7749 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "Solar_Cells"
+			(at 116.84 107.3149 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 113.03 105.156 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 113.03 105.156 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Multiple solar cells"
+			(at 113.03 106.68 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "2359a92b-15ab-4960-ad2f-22478a9403bf")
+		)
+		(pin "2"
+			(uuid "79405668-9bc6-47e5-9811-768fe74abfb8")
+		)
+		(instances
+			(project "solar schematic"
+				(path "/f58c710e-4405-4319-81b5-d841b05defb3/482cb7d6-23f9-424e-91b5-9667b2098b6c"
+					(reference "SC2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_name "96V30A_MPPT_1")
+		(lib_id "solar car:96V30A_MPPT")
+		(at 140.97 105.41 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "9e6531d3-ecb5-4dbc-bffb-acf47f2dd6cd")
+		(property "Reference" "U29"
+			(at 147.32 100.33 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "96V30A_MPPT"
+			(at 147.32 102.87 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 140.97 105.41 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://makeskyblue.com/products/96v-30a-mppt-solar-charge-controller-w-wifi-1"
+			(at 140.97 105.41 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 140.97 105.41 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin ""
+			(uuid "03c7eb18-7364-49fe-8699-3952b210ada1")
+		)
+		(pin ""
+			(uuid "be880634-97b8-44fb-b251-94769c17861f")
+		)
+		(pin ""
+			(uuid "3c74711e-390b-4e18-88da-42dd150ca29d")
+		)
+		(pin ""
+			(uuid "395451e3-02c4-44d8-b63d-acb6baade008")
+		)
+		(pin ""
+			(uuid "8476bcb1-f769-447c-90b8-8b563bf2cab0")
+		)
+		(pin ""
+			(uuid "dbb8e189-3b0b-435a-9e40-d7991bf8567f")
+		)
+		(pin ""
+			(uuid "8c6b2a69-33f6-4e13-b70d-3ea3cf2b8cd0")
+		)
+		(pin ""
+			(uuid "88adb8c5-6304-4008-b97a-f0e7e5495f68")
+		)
+		(pin ""
+			(uuid "238cac8e-389d-4ebb-b69b-91bea171d794")
+		)
+		(pin ""
+			(uuid "cafa5434-916c-4d71-901e-92e581a8a9b1")
+		)
+		(pin ""
+			(uuid "0590559f-5192-4a15-8690-af6da2ba8252")
+		)
+		(pin ""
+			(uuid "fa790d30-543d-4293-9bfa-2d5aafef2742")
+		)
+		(pin ""
+			(uuid "d9790900-31b3-4ae0-9baf-47049ba3b445")
+		)
+		(instances
+			(project "solar schematic"
+				(path "/f58c710e-4405-4319-81b5-d841b05defb3/482cb7d6-23f9-424e-91b5-9667b2098b6c"
+					(reference "U29")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "solar car:96V30A_MPPT")
+		(at 142.24 71.12 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "b70a3245-9e2a-4500-8b83-664e3a797777")
+		(property "Reference" "U20"
+			(at 148.59 66.04 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "96V30A_MPPT"
+			(at 148.59 68.58 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 142.24 71.12 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" "https://makeskyblue.com/products/96v-30a-mppt-solar-charge-controller-w-wifi-1"
+			(at 142.24 71.12 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 142.24 71.12 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin ""
+			(uuid "5b0b609e-be7a-4a2a-bf88-1e3e0160dd4b")
+		)
+		(pin ""
+			(uuid "f0c8c1f6-b6d3-4d4b-9613-360484028f39")
+		)
+		(pin ""
+			(uuid "00432146-4159-4473-b50c-9d09db2783be")
+		)
+		(pin ""
+			(uuid "c4840e8f-aaf0-402d-a89c-cdf330f26689")
+		)
+		(pin ""
+			(uuid "5baaaa57-078b-4a55-9e32-84fa8f3641d1")
+		)
+		(pin ""
+			(uuid "85e4e37e-c56b-4be2-a26c-d1ef885db66d")
+		)
+		(pin ""
+			(uuid "1a4590a4-ce98-4fb0-9b70-2af1983edfa7")
+		)
+		(pin ""
+			(uuid "b15ef638-6a9f-40f5-b6c5-f13614ef2e70")
+		)
+		(pin ""
+			(uuid "d50fc307-45b4-4378-aae9-e64a0c67ae88")
+		)
+		(pin ""
+			(uuid "8f25931e-cf9b-43dd-84a6-535106a732c1")
+		)
+		(pin ""
+			(uuid "b57814e8-b059-41f8-ae76-af21e5191d66")
+		)
+		(pin ""
+			(uuid "43a4ee37-7860-4277-94ca-301e87ba945a")
+		)
+		(pin ""
+			(uuid "2590ec21-4cad-4354-8f18-4c23b411175a")
+		)
+		(instances
+			(project "solar schematic"
+				(path "/f58c710e-4405-4319-81b5-d841b05defb3/482cb7d6-23f9-424e-91b5-9667b2098b6c"
+					(reference "U20")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:Solar_Cells")
+		(at 114.3 72.39 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "df9ef7a6-f581-4f8a-aac9-5478dbd8578f")
+		(property "Reference" "SC1"
+			(at 118.11 70.4849 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "Solar_Cells"
+			(at 118.11 73.0249 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 114.3 70.866 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 114.3 70.866 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Multiple solar cells"
+			(at 114.3 72.39 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "e62a8ecf-234b-48ec-a2ea-c63c5ea2aaea")
+		)
+		(pin "2"
+			(uuid "dada9c3d-3a68-47b2-9144-de34836cef7b")
+		)
+		(instances
+			(project "solar schematic"
+				(path "/f58c710e-4405-4319-81b5-d841b05defb3/482cb7d6-23f9-424e-91b5-9667b2098b6c"
+					(reference "SC1")
+					(unit 1)
+				)
+			)
+		)
+	)
+)
