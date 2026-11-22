@@ -2,7 +2,7 @@
 #include <ESPAsyncWebServer.h>
 
 const char* AP_SSID = "MotoTelemetry";
-const char* AP_PASSWORD = "YOUR_AP_PASSWORD";
+const char* AP_PASSWORD = "seagullsolar";
 
 AsyncWebServer server(80);
 AsyncWebSocket ws("/ws");
