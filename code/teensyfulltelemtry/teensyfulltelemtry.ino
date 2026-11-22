@@ -1,5 +1,17 @@
+#include <SPI.h>
+#include <mcp2515.h>
+
 #define FARDRIVER_SERIAL Serial1
 #define FARDRIVER_BAUD 19200
+
+#define ESP32_SERIAL Serial2
+#define ESP32_BAUD 115200
+
+#define CAN_CS_PIN 10
+MCP2515 mcp2515(CAN_CS_PIN);
+
+#define CAN_ID_MOTOR   0x100
+#define CAN_ID_BATTERY 0x101
 
 const uint8_t flash_read_addr[55] = {
   0xE2, 0xE8, 0xEE, 0x00, 0x06, 0x0C, 0x12,
@@ -14,9 +26,6 @@ const uint8_t flash_read_addr[55] = {
 
 uint8_t fdFrame[16];
 uint8_t fdFrameLen = 0;
-
-#define ESP32_SERIAL Serial2
-#define ESP32_BAUD 115200
 
 struct Telemetry {
   float rpm = 0;
@@ -33,23 +42,29 @@ struct Telemetry {
   uint8_t wheel_radius = 0;
   uint8_t wheel_width = 0;
   uint8_t wheel_ratio = 0;
-  uint16_t rate_ratio = 1; 
+  uint16_t rate_ratio = 1;
 } telemetry;
 
 void setup() {
-  Serial.begin(115200);   
+  Serial.begin(115200);
   FARDRIVER_SERIAL.begin(FARDRIVER_BAUD);
   ESP32_SERIAL.begin(ESP32_BAUD);
+
+  SPI.begin();
+  mcp2515.reset();
+  mcp2515.setBitrate(CAN_500KBPS, MCP_8MHZ);
+  mcp2515.setNormalMode();
 }
 
 void loop() {
   readFardriver();
   computeDerived();
-  Serial.println("alive");
+
   static uint32_t lastSend = 0;
   if (millis() - lastSend >= 100) {
     lastSend = millis();
     sendJSON();
+    sendCAN();
   }
 }
 
@@ -79,7 +94,7 @@ void handleFardriverFrame(uint8_t *f) {
   } else if (addr == 0xE8) {
     telemetry.deci_volts = (int16_t)w0;
     telemetry.voltage = w0 / 10.0f;
-    telemetry.line_current = w1 / 4.0f;
+    telemetry.line_current = (int16_t)w1 / 4.0f;
     telemetry.fd_update_ms = millis();
   } else if (addr == 0x0C) {
     telemetry.zero_batt_coeff = (int16_t)(f[4] | (f[5] << 8));
@@ -115,4 +130,32 @@ void sendJSON() {
   ESP32_SERIAL.print(",\"speed_kmh\":");    ESP32_SERIAL.print(telemetry.speed_kmh, 1);
   ESP32_SERIAL.print(",\"soc\":");          ESP32_SERIAL.print(telemetry.soc_percent, 0);
   ESP32_SERIAL.println("}");
+}
+
+void sendCAN() {
+  struct can_frame frame;
+
+  uint16_t rpm = (uint16_t)telemetry.rpm;
+  uint16_t speed10 = (uint16_t)(telemetry.speed_kmh * 10);
+
+  frame.can_id = CAN_ID_MOTOR;
+  frame.can_dlc = 4;
+  frame.data[0] = lowByte(rpm);
+  frame.data[1] = highByte(rpm);
+  frame.data[2] = lowByte(speed10);
+  frame.data[3] = highByte(speed10);
+  mcp2515.sendMessage(&frame);
+
+  uint16_t volts10 = (uint16_t)(telemetry.voltage * 10);
+  int16_t amps10 = (int16_t)(telemetry.line_current * 10);
+  uint8_t soc = (uint8_t)telemetry.soc_percent;
+
+  frame.can_id = CAN_ID_BATTERY;
+  frame.can_dlc = 5;
+  frame.data[0] = lowByte(volts10);
+  frame.data[1] = highByte(volts10);
+  frame.data[2] = lowByte(amps10);
+  frame.data[3] = highByte(amps10);
+  frame.data[4] = soc;
+  mcp2515.sendMessage(&frame);
 }

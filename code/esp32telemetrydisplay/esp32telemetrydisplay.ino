@@ -1,16 +1,11 @@
-// http://192.168.4.1
-
 #include <WiFi.h>
 #include <ESPAsyncWebServer.h>
-#include <U8g2lib.h>
-#include <SPI.h>
 
 const char* AP_SSID = "MotoTelemetry";
-const char* AP_PASSWORD = "lol_nice_try";
+const char* AP_PASSWORD = "YOUR_AP_PASSWORD";
 
 AsyncWebServer server(80);
 AsyncWebSocket ws("/ws");
-U8G2_ST7920_128X64_F_HW_SPI u8g2(U8G2_R0, 5, 4);
 HardwareSerial TeensySerial(2);
 String latestJSON = "{}";
 
@@ -79,8 +74,6 @@ void setup() {
   });
 
   server.begin();
-
-  u8g2.begin();
 }
 
 void loop() {
@@ -91,38 +84,12 @@ void loop() {
       if (buf.length() > 5) {
         latestJSON = buf;
         notifyClients();
-        updateLCD(buf);
       }
       buf = "";
     } else {
       buf += c;
+      if (buf.length() > 200) buf = "";
     }
   }
   ws.cleanupClients();
-}
-
-void updateLCD(const String &json) {
-  float rpm = extractFloat(json, "rpm");
-  float voltage = extractFloat(json, "voltage");
-  float current = extractFloat(json, "line_current");
-  float speed = extractFloat(json, "speed_kmh");
-  float soc = extractFloat(json, "soc");
-
-  u8g2.clearBuffer();
-  u8g2.setFont(u8g2_font_7x14B_tr);
-  u8g2.setCursor(0, 14);  u8g2.print("RPM  "); u8g2.print(rpm, 0);
-  u8g2.setCursor(0, 32);  u8g2.print("Volt "); u8g2.print(voltage, 1);
-  u8g2.setCursor(0, 50);  u8g2.print("Amp  "); u8g2.print(current, 1);
-  u8g2.setCursor(70, 14); u8g2.print(speed, 0); u8g2.print("km/h");
-  u8g2.setCursor(70, 32); u8g2.print("SOC "); u8g2.print(soc, 0); u8g2.print("%");
-  u8g2.sendBuffer();
-}
-
-float extractFloat(const String &json, const String &key) {
-  int idx = json.indexOf("\"" + key + "\":");
-  if (idx == -1) return 0;
-  idx = json.indexOf(':', idx) + 1;
-  int end = json.indexOf(',', idx);
-  if (end == -1) end = json.indexOf('}', idx);
-  return json.substring(idx, end).toFloat();
 }
